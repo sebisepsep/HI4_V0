@@ -1,0 +1,19 @@
+\subsection{b)}
+Here we are performing a logistic regression for whether a galaxy is spiral 1 or elliptical 0. For the minimalization routine I have choosen the golden ration search from the previous Hand-In. \\
+With the logistic function: 
+\begin{align}
+    h_\theta(z) &= \frac{1}{1+e^{-z}}\\
+    z &= \theta_0 x_0 + \theta_1 x_1 + ... 
+\end{align}
+Where $x_i$ represents our features. Here in my first attempt  $x_0(t) = 1$ and $x_{1}(t) = t$. 
+\begin{align}
+    h_\theta &= \frac{1}{1+e^{-(\theta_0 x_0+ \theta_1 x_2})}
+\end{align}
+Then we have our cost function: 
+\begin{align}
+    J(\theta) &= - \frac{1}{m} \sum \q{y^{i}  \cdot \ln(h_\theta (x^{i})) + (1-y^{i})\ln\q{1-h_\theta(x^{i})}}
+\end{align}
+where y is either 1 or 0 depending on our set and x is in our first iteration the kappa value. To minimize this, we are using the golden ratio search. \\
+
+The more moments I use, the more it converges, but at some dimension an owerflow appears so it's not working anymore. A possibility might be to scale the other moments as well. Because they can be far off. For N=5 (Or J - I used polynomials) the upper area had a okaish fit, but the lower not. This was the case kappa-flags. 
+In the second attempt we are trying color-flags.
