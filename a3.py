@@ -13,8 +13,8 @@ data_array = np.array([np.array([element[i] for element in data]) for i in np.ar
 M = len(data)
 
 for i in range(len(data_array)):
-    mean = sum(data_array[i])/M
-    std  = sum((data_array[i]-mean)**2)/M #or M-1?
+    mean = np.mean(data_array[i])
+    std  = np.std(data_array[i])
     data_array[i] = (data_array[i]-mean)/std
 features = data_array 
 
