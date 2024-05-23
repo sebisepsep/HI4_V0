@@ -19,7 +19,7 @@ echo "a3"
 python3 a3.py
 
 echo "b3" 
-python3 ab3.py
+python3 b3.py
 
 
 
