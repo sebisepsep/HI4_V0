@@ -7,13 +7,13 @@ echo "a1"
 python3 a1.py
 
 echo "b1" 
-python3 ab1.py
+python3 b1.py
 
 echo "a2" 
 python3 a2.py
 
 echo "b2" 
-python3 ab2.py
+python3 b2.py
 
 echo "a3" 
 python3 a3.py
