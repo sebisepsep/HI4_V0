@@ -18,6 +18,9 @@ for i in range(len(data_array)):
     data_array[i] = (data_array[i]-mean)/std
 features = data_array 
 
+np.save("kappa.npy",data_array[0])
+np.save("flag.npy",data_array[4])
+
 np.savetxt('data_array.txt', data_array, fmt='%s')
 
 fig, ax = plt.subplots(2,2, figsize=(10,8))
