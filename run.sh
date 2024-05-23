@@ -18,6 +18,8 @@ python3 b2.py
 echo "a3" 
 python3 a3.py
 
+echo "b3" 
+python3 b3.py
 
 
 
