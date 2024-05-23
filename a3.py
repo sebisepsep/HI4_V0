@@ -10,8 +10,6 @@ flag = np.array([element[4] for element in data])
 
 data_array = np.array([np.array([element[i] for element in data]) for i in np.arange(5)])
 
-np.savetxt('data_array.txt', data_array)
-
 M = len(data)
 
 for i in range(len(data_array)):
@@ -19,6 +17,9 @@ for i in range(len(data_array)):
     std  = sum((data_array[i]-mean)**2)/M #or M-1?
     data_array[i] = (data_array[i]-mean)/std
 features = data_array 
+
+np.savetxt('data_array.txt', data_array, fmt='%s')
+
 fig, ax = plt.subplots(2,2, figsize=(10,8))
 ax[0,0].hist(features[0], bins=20)
 ax[0,0].set(ylabel='N', xlabel=r'$\kappa_{CO}$')
