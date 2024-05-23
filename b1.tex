@@ -1,0 +1,28 @@
+\subsection{b)}
+In a classical Newtonian treatment we have the gravitational potential:
+\begin{align}
+    V(r) &= \frac{GmM_\odot}{r}\\
+    F &= m  \Vec{\ddot r} = - \nabla_r V(r) = \frac{GmM_\odot}{r^2} \Vec{n} = - \frac{GmM_\odot}{r^3} \Vec{r}\\
+   \Vec{\ddot  x} &= \Vec{\dot  v} = - \frac{GM_\odot}{\q{\sqrt{x^2+y^2+z^2}}^3} \Vec{x}
+\end{align}
+For the planet the force is ponting towards the sun. The scalar r is the absolute distance between the sun and the planet. In our example the sun is shifted towards the 0 position and to 0 velocity. $\Vec{r}$ is the position vector from the sun and therefore origin of the euclidean coordinates to the planet. \\
+For the initial kick-off we are using the Runge-Kutta method to calculate $v_{1/2}$ which we then use for the leap frog algorithm. \\
+In our treatment when we are analyzing the classical two body problem our system has conservation of energy. The leap frog algorithm is an algorithm which due to its time reversal respects this conservaiton of energy and does not add or substract energy from the system. Additionally, the leapfrog algorithm is relatively simple to implement and computationally efficient.
+
+For visibility, we want to do two versions of this plot. One with all planets, and another zoomed in on the four inner planets
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig1b.png}
+    \caption{Left panel: orbits of planets around the sun over 200 years. Right panel z over t plot over 200 years.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig1bInnen.png}
+    \caption{Left panel: orbits of planets around the sun over 200 years. Right panel z over t plot over approx. 2 years.}
+\end{figure}
+
+
+
+\lstinputlisting{b1.py}
+

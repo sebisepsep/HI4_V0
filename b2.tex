@@ -1,0 +1,29 @@
+\subsection{b)}
+Here we want calculate the potential from the poisson equation using the FFT. 
+\begin{align}
+    \nabla^2\phi &= 4 \pi G \Bar{\rho} \q{1+ \delta}\\
+    k^2 \Tilde{\phi} &= 4\pi G \Bar{\rho} \mathcal{F}\left[\q{1+\delta}\right] \\
+     \Tilde{\phi} &= \frac{1}{\q{2 \pi}^3}\frac{4\pi G \Bar{\rho} \q{\delta^{(3)}(k) + \hat{\delta}(k)}}{k^2}
+\end{align}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig2b_pot.png}
+    \caption{Fouriertransform: 2D slices of your grid at z = 4.5, 9.5, 11.5 and
+    14.5, showing the assigned to each grid point.}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig2b_fourier.png}
+    \caption{Inverse Fouriertransform: 2D slices of your grid at z = 4.5, 9.5, 11.5 and
+    14.5, showing the assigned to each grid point. Log of the aboulute value.}
+\end{figure}
+
+
+
+
+
+\lstinputlisting{b2.py}
